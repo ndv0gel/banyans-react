@@ -1,0 +1,234 @@
+/* Step 5: Style the body to have Banyans background image */
+body {
+    background-image: url('/banyans-background.jpg'), 
+                      url('/banyans-background.png'), 
+                      url('/banyans-background.jpeg'),
+                      url('/background.jpg'),
+                      url('/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling - exact spacing match */
+.navbar {
+    background-color: #fafafa !important;
+    padding: 0.5rem 0;
+    min-height: 70px;
+}
+
+/* Fix navbar alignment - center the nav items */
+.navbar-nav {
+    gap: 0;
+    margin: 0 auto !important; /* Center the navbar items */
+}
+
+.navbar-nav .nav-item {
+    margin: 0;
+}
+
+/* Different padding for text links vs icons */
+.nav-link.px-2 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+.nav-link.px-1 {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+}
+
+/* Override Bootstrap nav link color to black */
+.nav-link {
+    color: black !important;
+    transition: color 0.3s ease;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Blue hover effect for navbar links */
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Navbar brand (logo) styling */
+.navbar-brand {
+    padding: 0;
+    margin-right: 2rem;
+}
+
+/* Hamburger menu button styling */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Custom hamburger icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hero section height */
+.hero-section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* Center content styling */
+.display-4 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-weight: bold !important;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h3.text-white {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Compact footer to match Safari exactly */
+footer {
+    background-color: #1c1c1c !important;
+    color: #fafafa !important;
+    padding: 1rem 0 !important;
+    margin-top: auto;
+}
+
+footer h3 {
+    color: #fafafa;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer strong {
+    color: #fafafa;
+    font-size: 0.85rem;
+}
+
+/* Much more compact footer content */
+footer .col-md-4 {
+    padding: 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+/* Tighter line spacing in footer - match Safari exactly */
+footer p, footer div {
+    line-height: 1.1;
+    margin-bottom: 0.1rem;
+    font-size: 0.8rem;
+}
+
+/* Much smaller form elements */
+.form-control {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 0.3rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Responsive adjustments - HORIZONTAL MOBILE MENU */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        background-color: #fafafa;
+        padding: 0.5rem 0; /* Slightly more padding for horizontal layout */
+        margin-top: 0.25rem;
+        border-radius: 0.25rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        gap: 0;
+        display: flex !important; /* Force horizontal display */
+        flex-direction: row !important; /* Horizontal layout */
+        flex-wrap: wrap !important; /* Allow wrapping if needed */
+        justify-content: center !important; /* Center the items */
+    }
+    
+    .nav-item {
+        margin: 0;
+        flex: 0 0 auto; /* Don't grow or shrink */
+    }
+    
+    /* MOBILE-SPECIFIC: Compact horizontal nav links */
+    .navbar-collapse .nav-link {
+        padding: 0.25rem 0.3rem !important; /* Smaller horizontal padding */
+        font-size: 0.8rem !important; /* Smaller font for horizontal fit */
+    }
+    
+    /* Make social icons even more compact */
+    .navbar-collapse .nav-link.px-1 {
+        padding: 0.25rem 0.2rem !important; /* Even tighter for icons */
+    }
+    
+    .hero-section {
+        height: 40vh;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    /* Footer stacks vertically on mobile */
+    footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    footer {
+        padding: 1rem 0 !important;
+    }
+}
+
+/* DESKTOP ONLY: Ensure desktop navbar looks correct */
+@media (min-width: 768px) {
+    /* Reset desktop nav-link padding to original values */
+    .nav-link {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    /* Ensure proper desktop spacing */
+    .navbar-nav {
+        gap: 0;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+}
+
+/* Underline the active/current page */
+.nav-link.active-page {
+    text-decoration: underline;
+}
